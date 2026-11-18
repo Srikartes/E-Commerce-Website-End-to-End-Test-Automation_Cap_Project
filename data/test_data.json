@@ -2,6 +2,7 @@
   "user": {
     "name": "Mohan",
     "password": "Password123",
+    "title": "Mr",
     "birth_date": "15",
     "birth_month": "6",
     "birth_year": "1995",
@@ -20,5 +21,15 @@
     "email": "nonexistent_user_999@test.com",
     "password": "InvalidPass123"
   },
-  "search_product": "Blue Top"
+  "invalid_user": {
+    "email": "invalid_user_9999@gmail.com",
+    "password": "WrongPassword123"
+  },
+  "search_products": ["Blue Top", "Men Tshirt", "Sleeveless Dress"],
+  "search_product": "Blue Top",
+  "subscription_email": "mohan_sub@gmail.com"
 }
+
+
+  
+  
