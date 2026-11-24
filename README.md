@@ -28,7 +28,7 @@ E-Commerce-Website End-to-End Test Automation/
 │       ├── test_api_06_update_user_account.py
 │       ├── test_api_07_delete_user_account.py
 │       └── test_api_08_get_user_details.py
-├── reports/                            # Generated HTML and Allure reports
+├── reports/                            # Generated HTML, UI and API reports
 ├── screenshots/                        # Failure screenshots (auto-generated)
 ├── traces/                             # Playwright trace archives on failure
 ├── conftest.py                         # Shared fixtures, API context & failure hooks
@@ -86,11 +86,6 @@ E-Commerce-Website End-to-End Test Automation/
 8. `GET /api/getUserDetailByEmail` – Get user details by email
 
 ---
-<!-- #### Negative & Edge-Case API Scenarios (Parametrized)
-#9. `POST /api/searchProduct` – Search product without `search_product` #parameter (`400 Bad Request`)
-10. `POST /api/verifyLogin` – Verify login with invalid credentials (`404 User not found!`)
-#11. `POST /api/verifyLogin` – Verify login with missing parameters (`400 Bad #Request` – 3 parametrized cases: missing email, missing password, missing both)
-#12. Unsupported HTTP Methods (`405 Method Not Allowed` – 3 parametrized #cases: `POST /api/productsList`, `PUT /api/brandsList`, `DELETE /api/#verifyLogin`) -->
 
 ### API Automation Coverage for above ap's(8 Positive + 4 Negative Scenarios)
 
@@ -155,6 +150,10 @@ pytest tests/ -v --html=reports/report.html --self-contained-html
 ## Reports & Debugging Artifacts
 
 * **HTML Report:** Open `reports/report.html` in any browser after a test run to view detailed pass/fail results.
+              - `reports/report.html`
+              -  `reports/api_report.html`
+              -   `reports/ui_report.html`
+
 * **Failure Screenshots:** Automatically saved to `screenshots/<test_name>.png` whenever a UI test fails.
 * **Playwright Traces:** Automatically saved to `traces/<test_name>_trace.zip` on failure. View any trace interactively with:
   ```bash
